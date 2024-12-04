@@ -21,5 +21,24 @@
  */
 
 /* eslint-disable no-console */
-console.log( 'Hello World! (from create-block-quote-carrousel-block block)' );
+import Swiper from "swiper";
+import "swiper/css";
+import { Autoplay } from "swiper/modules";
+
+// Didn't find a way to add the swiper-slide class upstream, so did it on rendering
+let slides = document.querySelectorAll(".wp-block-create-block-quote-carrousel-block blockquote")
+slides.forEach(function(slide){
+    slide.classList.add("swiper-slide")
+})
+
+const quoteCarrousel = new Swiper(".wp-block-create-block-quote-carrousel-block.swiper", {
+	modules: [Autoplay],
+	loop: true,
+	autoplay: {
+		delay: 5000,
+		pauseOnMouseEnter: true,
+	},
+});
+
+console.log("Hello World! (from create-block-quote-carrousel-block block)");
 /* eslint-enable no-console */
