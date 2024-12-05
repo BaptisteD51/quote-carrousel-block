@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from "@wordpress/i18n";
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InnerBlocks, useInnerBlocksProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from "@wordpress/block-editor";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -19,7 +19,7 @@ import { useBlockProps, InnerBlocks, useInnerBlocksProps } from '@wordpress/bloc
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import './editor.css';
+import "./editor.css";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -29,12 +29,32 @@ import './editor.css';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
-    const ALLOWED_BLOCKS = [ 'core/quote' ];
+
+import { TextControl } from "@wordpress/components";
+
+export default function Edit({ attributes, setAttributes }) {
+	const { quote, author } = attributes;
+	console.log(quote);
+	console.log(author);
 
 	return (
-		<div { ...useBlockProps() }>
-            <InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } />
+		<div {...useBlockProps()}>
+			<blockquote>
+				<RichText
+					placeholder="Quote..."
+					onChange={(value) => {
+						setAttributes({ quote: value });
+					}}
+					value={quote}
+				/>
+				<RichText
+					placeholder="Author..."
+					onChange={(value) => {
+						setAttributes({ author: value });
+					}}
+					value={author}
+				/>
+			</blockquote>
 		</div>
 	);
 }

@@ -4,7 +4,8 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks } from "@wordpress/block-editor";
+import { RawHTML } from "@wordpress/element";
 
 /**
  * The save function defines the way in which the different attributes should
@@ -15,18 +16,21 @@ import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
  *
  * @return {Element} Element to render.
  */
-export default function save() {
-    const blockProps = useBlockProps.save({
-        className:"swiper"
-    })
+export default function save({ attributes, setAttributes }) {
+	const blockProps = useBlockProps.save({
+		className: "swiper-slide",
+	});
 
-    console.log(InnerBlocks.Content)
+	const { quote, author } = attributes;
 
 	return (
-		<div { ...blockProps }>
-            <div class="swiper-wrapper">
-                <InnerBlocks.Content/>
-            </div>
-		</div>
+		<blockquote {...blockProps}>
+			<p>
+				<RawHTML>{quote}</RawHTML>
+			</p>
+			<cite>
+				<RawHTML>{author}</RawHTML>
+			</cite>
+		</blockquote>
 	);
 }

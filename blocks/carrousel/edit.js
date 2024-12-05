@@ -30,7 +30,7 @@ import './editor.css';
  * @return {Element} Element to render.
  */
 export default function Edit() {
-    const ALLOWED_BLOCKS = [ 'core/quote' ];
+    const ALLOWED_BLOCKS = [ 'create-block/slide-block' ];
 
 	return (
 		<div { ...useBlockProps() }>

@@ -52,7 +52,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Edit() {
-  const ALLOWED_BLOCKS = ['core/quote'];
+  const ALLOWED_BLOCKS = ['create-block/slide-block'];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
