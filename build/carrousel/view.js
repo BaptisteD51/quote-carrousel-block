@@ -10505,38 +10505,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-/**
- * Use this file for JavaScript code that you want to run in the front-end
- * on posts/pages that contain this block.
- *
- * When this file is defined as the value of the `viewScript` property
- * in `block.json` it will be enqueued on the front end of the site.
- *
- * Example:
- *
- * ```js
- * {
- *   "viewScript": "file:./view.js"
- * }
- * ```
- *
- * If you're not making any changes to this file because your project doesn't need any
- * JavaScript running in the front-end, then you should delete this file and remove
- * the `viewScript` property from `block.json`.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
- */
-
 /* eslint-disable no-console */
 
 
 
-
-// Didn't find a way to add the swiper-slide class upstream, so did it on rendering
-let slides = document.querySelectorAll(".wp-block-create-block-quote-carrousel-block blockquote");
-slides.forEach(function (slide) {
-  slide.classList.add("swiper-slide");
-});
 const quoteCarrousel = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".wp-block-create-block-quote-carrousel-block.swiper", {
   modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Autoplay],
   loop: true,
@@ -10545,7 +10517,7 @@ const quoteCarrousel = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".wp-b
     pauseOnMouseEnter: true
   }
 });
-console.log("Hello World! (from create-block-quote-carrousel-block block)");
+
 /* eslint-enable no-console */
 })();
 

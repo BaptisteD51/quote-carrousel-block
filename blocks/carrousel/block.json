@@ -4,7 +4,7 @@
 	"name": "create-block/quote-carrousel-block",
 	"version": "0.1.0",
 	"title": "Quote Carrousel Block",
-	"category": "widgets",
+	"category": "design",
 	"description": "The block containing the quote slides",
 	"example": {},
 	"supports": {
@@ -13,6 +13,5 @@
 	"textdomain": "quote-carrousel-block",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css",
 	"viewScript": "file:./view.js"
 }

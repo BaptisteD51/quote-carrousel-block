@@ -26,7 +26,6 @@
 
 /* eslint-disable no-console */
 
-console.log("A slide");
 /* eslint-enable no-console */
 /******/ })()
 ;
