@@ -8,8 +8,11 @@
 	"description": "The block containing the quote slides",
 	"example": {},
 	"supports": {
-		"html": false
-	},
+		"html": false,
+        "spacing":{
+            "padding": ["top","bottom"]
+        }
+    },
 	"textdomain": "quote-carrousel-block",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

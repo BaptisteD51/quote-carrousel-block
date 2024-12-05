@@ -28,11 +28,16 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Edit() {
-  const ALLOWED_BLOCKS = ['create-block/slide-block'];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
-      allowedBlocks: ALLOWED_BLOCKS
+  const ALLOWED_BLOCKS = ["create-block/slide-block"];
+  console.log({
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)()
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
+        allowedBlocks: ALLOWED_BLOCKS
+      })
     })
   });
 }
@@ -132,7 +137,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/quote-carrousel-block","version":"0.1.0","title":"Quote Carrousel Block","category":"design","description":"The block containing the quote slides","example":{},"supports":{"html":false},"textdomain":"quote-carrousel-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/quote-carrousel-block","version":"0.1.0","title":"Quote Carrousel Block","category":"design","description":"The block containing the quote slides","example":{},"supports":{"html":false,"spacing":{"padding":["top","bottom"]}},"textdomain":"quote-carrousel-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
