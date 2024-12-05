@@ -39,22 +39,22 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<div {...useBlockProps()}>
-			<blockquote>
-				<RichText
-					placeholder="Quote..."
-					onChange={(value) => {
-						setAttributes({ quote: value });
-					}}
-					value={quote}
-				/>
-				<RichText
-					placeholder="Author..."
-					onChange={(value) => {
-						setAttributes({ author: value });
-					}}
-					value={author}
-				/>
-			</blockquote>
+			<RichText
+				placeholder="Quote..."
+				onChange={(value) => {
+					setAttributes({ quote: value });
+				}}
+				value={quote}
+                className="quote-rich-text"
+			/>
+			<RichText
+				placeholder="Author..."
+				onChange={(value) => {
+					setAttributes({ author: value });
+				}}
+				value={author}
+                className="author-rich-text"
+			/>
 		</div>
 	);
 }

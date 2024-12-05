@@ -5,8 +5,7 @@
   "version": "0.1.0",
   "title": "Quote Carrousel Block",
   "category": "widgets",
-  "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "description": "The block containing the quote slides",
   "example": {},
   "supports": {
     "html": false

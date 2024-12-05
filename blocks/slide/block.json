@@ -3,10 +3,9 @@
 	"apiVersion": 3,
 	"name": "create-block/slide-block",
 	"version": "0.1.0",
-	"title": "Slide Block",
+	"title": "Quote Slide Block",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "A slide containing a quote with its author",
 	"example": {},
     "attributes":{
         "quote":{

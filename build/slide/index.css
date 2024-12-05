@@ -7,9 +7,25 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-quote-carrousel-block {
-	border: 1px dotted #f00;
+.wp-block-create-block-slide-block{
+    border-left: solid white 4px;
+    padding-left: 20px;
 }
 
+.quote-rich-text,.author-rich-text{
+    font-style: italic;
+}
+
+.author-rich-text{
+    margin-top:30px;
+}
+
+.quote-rich-text::before, .quote-rich-text::after{
+    content: '"';
+}
+
+.author-rich-text::before, .author-rich-text::after{
+    content: " - ";
+}
 
 /*# sourceMappingURL=index.css.map*/
