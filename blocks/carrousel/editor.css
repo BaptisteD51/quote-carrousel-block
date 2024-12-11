@@ -1,4 +1,8 @@
-.wp-block-create-block-quote-carrousel-block{
+.wp-block-create-block-quote-carrousel-block.no-preview{
     border: dashed 2px white;
     padding: 20px;
- }
+}
+
+.wp-block-create-block-quote-carrousel-block.preview-slider blockquote{
+    margin:0px;
+}

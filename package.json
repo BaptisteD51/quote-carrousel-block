@@ -18,6 +18,8 @@
 		"@wordpress/scripts": "^30.6.0"
 	},
 	"dependencies": {
+		"@wordpress/block-editor": "^14.9.0",
+		"@wordpress/data": "^10.14.0",
 		"swiper": "^11.1.15"
 	}
 }
